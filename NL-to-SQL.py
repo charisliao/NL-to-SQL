@@ -17,3 +17,12 @@ def create_table_definition_prompt(df):
     '''.format(",".join(str(x) for x in df.columns))
 
     return prompt
+
+def user_query_input():
+    """Ask the user what they want to know about the data.
+
+    Returns:
+        string: User input
+    """
+    user_input = input("Tell OpenAi what you want to know about the data: ")
+    return user_input
